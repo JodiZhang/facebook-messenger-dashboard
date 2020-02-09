@@ -50,7 +50,7 @@ richardvalues = data4.loc[1, ~data4.columns.isin(['content','sender_name'])]
 
 #### CREATE DASHBOARD USING ####
 
-app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
+app = dash.Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 ##auth = dash_auth.BasicAuth(app,USERNAME_PASSWORD_PAIRS)
 server = app.server
 
@@ -227,4 +227,4 @@ app.layout = html.Div([body])
 
 # Starting the server
 if __name__ == "__main__":
-    app.run_server(debug=True)  
+    app.run_server()  
