@@ -9,22 +9,32 @@ import dash_bootstrap_components as dbc
 import chart_studio.plotly as py
 import plotly.express as px
 import plotly.graph_objs as go
+import os
 
 ##import dash_auth
 ##USERNAME_PASSWORD_PAIRS = [['jodi','fbportfolio']]
 
 #### LOAD CSV FILES AND CREATE DATAFRAME ####
-data0 = pd.read_csv('/data/messagestimeline.csv')
+#data0 = pd.read_csv('.../data/messagestimeline.csv')
+#data1 = pd.read_csv('.../data/videochattimeline.csv')
+#data2 = pd.read_csv('.../data/avgmonthlywordcount.csv')
+#data3 = pd.read_csv('.../data/activitybyweekday.csv')
+#data4 = pd.read_csv('.../data/mediatotals.csv')
 
-data1 = pd.read_csv('/data/videochattimeline.csv')
+with open(os.path.join("data", "messagestimeline.csv")) as file:
+    data0 = pd.read_csv(file)
+    
+with open(os.path.join("data", "videochattimeline.csv")) as file:
+    data1 = pd.read_csv(file)    
 
-data2 = pd.read_csv('/data/avgmonthlywordcount.csv')
+with open(os.path.join("data", "avgmonthlywordcount.csv")) as file:
+    data2 = pd.read_csv(file)    
 
-data3 = pd.read_csv('/data/activitybyweekday.csv')
-
-data4 = pd.read_csv('/data/mediatotals.csv')
-
-
+with open(os.path.join("data", "activitybyweekday.csv")) as file:
+    data3 = pd.read_csv(file)    
+    
+with open(os.path.join("data", "mediatotals.csv")) as file:
+    data4 = pd.read_csv(file)    
 
 #### GROUP DATA FOR GRAPHS ####
 
@@ -42,7 +52,7 @@ richardvalues = data4.loc[1, ~data4.columns.isin(['content','sender_name'])]
 
 app = dash.Dash(__name__,external_stylesheets=[dbc.themes.BOOTSTRAP])
 ##auth = dash_auth.BasicAuth(app,USERNAME_PASSWORD_PAIRS)
-# server = app.server
+server = app.server
 
 colors = {
     'chartbackground': '#ffffff',
