@@ -1,1 +1,1 @@
-web: gunicorn fb_messenger:server
+web:gunicorn fb_messenger:server
