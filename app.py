@@ -63,7 +63,6 @@ colors = {
 piecolours=['#7BA3B7','#6C8FA0','#5C7A89','#4D6672','#3D525B','#2E3D45','1F292E','0F1417']
 
 graph1 = [
-    #html.H3("Total Messages Per User",className="text-center"),
     dcc.Graph(
         id='piechart',
         figure={
@@ -77,7 +76,6 @@ graph1 = [
 ]
 
 graph2 = [
-   ## html.H3("Timeline of Message Counts",className="text-center"),
     dcc.Graph(
         id='linegraph',
         figure={
@@ -95,7 +93,6 @@ graph2 = [
 ]
 
 graph3 = [
-    #html.H3("Average Word Count per Month",className="text-center"),
     dcc.Graph(
         id='bargraph1',
         figure={
@@ -103,7 +100,7 @@ graph3 = [
                 {'x': data2['yearmonth'], 'y': data2['jodi_count'], 'type': 'line', 'name': 'Jodi'},
                 {'x': data2['yearmonth'], 'y': data2['richard_count'], 'type': 'line', 'name': 'Richard'},
             ],
-            'layout': {'title': '<b>Average Monthly Word Count</b>',
+            'layout': {'title': '<b> Monthly Word Count</b>',
 					    'plot_bgcolor': colors['background'],
 					    'paper_bgcolor': colors['chartbackground'],
 						'font': {'color': colors['text']},
@@ -113,7 +110,6 @@ graph3 = [
 ]
 
 graph4 = [
-    #html.H3("Number of Video Calls per Day",className="text-center"),
     dcc.Graph(
         id='bargraph2',
         figure={
@@ -131,7 +127,6 @@ graph4 = [
 ]
 
 graph5 = [
-    #html.H3("Jodi's Media Allocation",className="text-center"),
     dcc.Graph(
         id='piechart2',
         figure={
@@ -147,7 +142,6 @@ graph5 = [
 ]
 
 graph6 = [
-    #html.H3("Richard's Media Allocation",className="text-center"),
     dcc.Graph(
         id='piechart3',
         figure={
@@ -163,7 +157,6 @@ graph6 = [
 ]
 
 graph7 = [
-    #html.H3("Activity per Week Day",className="text-center"),
     dcc.Graph(
         id='bargraph3',
         figure={
