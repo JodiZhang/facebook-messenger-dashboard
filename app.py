@@ -27,7 +27,7 @@ with open(os.path.join("data", "messagestimeline.csv")) as file:
 with open(os.path.join("data", "videochattimeline.csv")) as file:
     data1 = pd.read_csv(file)    
 
-with open(os.path.join("data", "avgmonthlywordcount.csv")) as file:
+with open(os.path.join("data", "monthlywordcount.csv")) as file:
     data2 = pd.read_csv(file)    
 
 with open(os.path.join("data", "activitybyweekday.csv")) as file:
@@ -100,7 +100,7 @@ graph3 = [
                 {'x': data2['yearmonth'], 'y': data2['jodi_count'], 'type': 'line', 'name': 'Jodi'},
                 {'x': data2['yearmonth'], 'y': data2['richard_count'], 'type': 'line', 'name': 'Richard'},
             ],
-            'layout': {'title': '<b> Monthly Word Count</b>',
+            'layout': {'title': '<b>Monthly Word Count</b>',
 					    'plot_bgcolor': colors['background'],
 					    'paper_bgcolor': colors['chartbackground'],
 						'font': {'color': colors['text']},
