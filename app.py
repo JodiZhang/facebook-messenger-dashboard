@@ -203,7 +203,7 @@ body = dbc.Container(
         dbc.Row(
             [
                 dbc.Col([html.H5('Jodi',className="text-center"),
-                        html.Img(src=app.get_asset_url('jodiwordcloud.png'),style={'height':'90%', 'width':'90%'})
+                        html.Img(src='/assets/jodiwordcloud.png' ,style={'height':'90%', 'width':'90%'})
                         ]),
                 dbc.Col([html.H5('Richard',className="text-center"),
                         html.Img(src=app.get_asset_url('richardwordcloud.png'),style={'height':'90%', 'width':'90%'}) 
@@ -213,7 +213,6 @@ body = dbc.Container(
     ]
     , fluid=True
 )
-
 
 # Setting layout for the application
 app.layout = html.Div([body])
