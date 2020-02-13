@@ -198,18 +198,18 @@ body = dbc.Container(
                 dbc.Col(graph6)
             ]
         ),
-        html.H2('Word Cloud',className="text-center"),
-        dbc.Row(),
-        dbc.Row(
-            [
-                dbc.Col([html.H5('Jodi',className="text-center"),
-                        html.Img(src='/assets/jodiwordcloud.png' ,style={'height':'90%', 'width':'90%'})
-                        ]),
-                dbc.Col([html.H5('Richard',className="text-center"),
-                        html.Img(src=app.get_asset_url('richardwordcloud.png'),style={'height':'90%', 'width':'90%'}) 
-                        ])
-            ]            
-        )
+#        html.H2('Word Cloud',className="text-center"),
+#        dbc.Row(),
+#        dbc.Row(
+#            [
+#                dbc.Col([html.H5('Jodi',className="text-center"),
+#                        html.Img(src='/assets/jodiwordcloud.png' , style={'height':'90%', 'width':'90%'})
+#                        ]),
+#                dbc.Col([html.H5('Richard',className="text-center"),
+#                        html.Img(src=app.get_asset_url('richardwordcloud.png'),style={'height':'90%', 'width':'90%'}) 
+#                        ])
+#            ]            
+#        )
     ]
     , fluid=True
 )
