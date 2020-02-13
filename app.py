@@ -164,7 +164,7 @@ graph7 = [
                 {'x': data3['weekday'], 'y': data3['jodi_count'], 'type': 'bar', 'name': 'Jodi'},
                 {'x': data3['weekday'], 'y': data3['richard_count'], 'type': 'bar', 'name': 'Richard'},
             ],
-            'layout': {'title': '<b>Actvity Per Week</b>',
+            'layout': {'title': '<b>Activity Per Week</b>',
 					    'plot_bgcolor': colors['background'],
 					    'paper_bgcolor': colors['chartbackground'],
 						'font': {'color': colors['text']},
